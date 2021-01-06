@@ -7,28 +7,28 @@ public class Number {
         int b = 3;
         int c = 2;
         int x = 1;
-        int max1;
-        int max2;
+        int min1;
+        int min2;
         int max;
 
         if (a > b) {
-            max1 = a;
+            min1 = b;
         } else {
-            max1 = b;
+            min1 = a;
         }
 
         if (c > x) {
-            max2 = c;
+            min2 = x;
         } else {
-            max2 = x;
+            min2 = c;
         }
 
-        if (max1 > max2) {
-            max = max1;
+        if (min1 > min2) {
+            max = min1;
             System.out.println(max);
         } else {
-            max = max2;
-            System.out.println(max2);
+            max = min2;
+            System.out.println(min2);
         }
 
     }
