@@ -2,20 +2,23 @@ package Task4;
 
 public class Brick {
     public static void main(String[] args) {
-        int A = 60;
-        int B = 40;
+        int A = 40;
+        int B = 60;
+
         int x = 59;
         int y = 59;
         int z = 59;
 
-        boolean боком = x <= B || y <= A; // кирпич проходит боком
-        boolean передом = z <= B || y <= A; //
-        boolean верхом = x <= B || z <= A; //
+        boolean side = x <= B && y <= A; // кирпич проходит боком
+        boolean front = z <= B && y <= A; //
+        boolean up = x <= B && z <= A; //
+        boolean suit = side == true && front == true && up == true;
 
-        if (боком && передом && верхом) {
-            System.out.println("проходит");
+        if (suit) {
+            System.out.println("Кирпич проходит в отверстие");
         } else {
-            System.out.println("не проходит");
+            System.out.println("Кирпич не проходит в отверстие");
         }
+
     }
 }
